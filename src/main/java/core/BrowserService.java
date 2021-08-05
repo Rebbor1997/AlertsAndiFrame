@@ -12,9 +12,7 @@ public class BrowserService {
     private ReadProperties properties = new ReadProperties();
     private WebDriver  driver;
 
-
     public BrowserService() {
-
         switch (properties.getBrowser().toLowerCase()) {
             case "chrome":
                 WebDriverManager.getInstance(DriverManagerType.CHROME).setup();
@@ -24,13 +22,9 @@ public class BrowserService {
             default:
                 throw new AssertionError("Данный браузер не поддерживается.");
         }
-
         driver.manage().timeouts().implicitlyWait(0, TimeUnit.MILLISECONDS);
-
     }
     public WebDriver getDriver() {
         return driver;
     }
-
-
 }

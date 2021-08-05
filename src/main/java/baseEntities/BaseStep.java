@@ -7,6 +7,5 @@ public class BaseStep {
 
     public BaseStep(WebDriver driver) {
         this.driver = driver;
-
     }
 }

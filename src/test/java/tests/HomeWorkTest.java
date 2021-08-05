@@ -94,7 +94,7 @@ public class HomeWorkTest extends BaseTest {
     @Test
     public void iframeDemoQA() throws InterruptedException {
         driver.get("https://demoqa.com/frames");
-        Actions actions = new Actions(driver);
+        Actions actions = new  Actions(driver);
         WebElement simpleAlertButton = driver.findElement(By.className("main-header"));
         actions
                 .moveToElement(simpleAlertButton)

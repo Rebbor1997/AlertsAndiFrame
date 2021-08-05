@@ -13,7 +13,6 @@ public class BaseTest {
     protected ReadProperties properties;
     protected Waits waits;
 
-
     @BeforeTest
     public void setupTest(){
 

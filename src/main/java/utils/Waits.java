@@ -13,8 +13,6 @@ public class Waits {
     private WebDriverWait wait;
     private WebDriver driver;
 
-
-
     public Waits(WebDriver driver, int  timeout){
         this.driver = driver;
         wait = new WebDriverWait(driver, timeout);
