@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import java.util.concurrent.TimeUnit;
 
 public class BrowserService {
-    private ReadProperties properties = new ReadProperties();
+    private ReadProperties properties  = new ReadProperties();
     private WebDriver  driver;
 
     public BrowserService() {
@@ -26,5 +26,13 @@ public class BrowserService {
     }
     public WebDriver getDriver() {
         return driver;
+    }
+
+    public void sleep(long millis) {
+        try {
+            Thread.sleep(millis);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

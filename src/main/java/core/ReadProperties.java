@@ -7,7 +7,7 @@ public class ReadProperties {
     protected Properties  properties;
 
     public ReadProperties(){
-        properties = new Properties();
+        properties =  new Properties();
 
         try {
             properties.load(getClass().getClassLoader().getResourceAsStream("config.properties"));

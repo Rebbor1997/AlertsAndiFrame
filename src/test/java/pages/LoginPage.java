@@ -1,13 +1,18 @@
 package pages;
 
 import baseEntities.BasePage;
+import core.BrowserService;
 import elements.UIElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 public class LoginPage extends BasePage {
+
+    @FindBy(id = "name")
+    public WebElement name_Input;
 
     private final static By name_Input_By = By.id("name");
     private final static By password_Input_By = By.id("password");
@@ -42,4 +47,6 @@ public class LoginPage extends BasePage {
     }
     public void setPassword(String text) { getPasswordInput().sendKeys(text); }
     public void clickLoginButton() { getLoginButton().click(); }
+
+
 }
